@@ -26,7 +26,30 @@
                 ]
             }
         ],
-        "link": "http://miweb.com/proyecto"
+        "link": "http://miweb.com/proyecto",
+        "founder": {
+            "_id": {
+                "$oid": "652329a699197f567ebbbe58"
+            },
+            "profile_pic": "https://picsum.photos/400/225",
+            "name": "Brisa",
+            "last_name": "Marca",
+            "bio": "Estudiante de Diseño y Desarrollo Web en Da Vinci",
+            "location": "Buenos Aires",
+            "professional_profile": [
+                "Fullstack Developer"
+            ],
+            "skills": [
+                "PHP",
+                "Laravel"
+            ],
+            "experience_level": "Aprendiz",
+            "availability": "Alto",
+            "portfolio": "https://github.com/analaura-a/api-rest",
+            "preferences": [
+                "Open-source"
+            ]
+        }
     },
     {
         "type": "personal",
