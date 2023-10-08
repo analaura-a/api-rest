@@ -31,7 +31,7 @@ const createProject = (req, res) => {
         status: req.body.status,
         name: req.body.name,
         about: req.body.about,
-        img: "https://picsum.photos/400/225",
+        img: req.body.img,
         required_availability: req.body.required_availability,
         link: req.body.link
     };

@@ -24,7 +24,36 @@ const getUserById = (req, res) => {
 
 };
 
+//Crear un nuevo usuario
+const createUser = (req, res) => {
+
+    const user = {
+        profile_pic: req.body.profile_pic,
+        name: req.body.name,
+        last_name: req.body.last_name,
+        bio: req.body.bio,
+        location: req.body.location,
+        professional_profile: req.body.professional_profile,
+        skills: req.body.skills,
+        experience_level: req.body.experience_level,
+        availability: req.body.availability,
+        portfolio: req.body.portfolio,
+        preferences: req.body.preferences
+    };
+
+    service
+        .createUser(user)
+        .then((newUser) => {
+            res.status(201).json(newUser);
+        })
+        .catch((error) => {
+            res.status(500).json();
+        });
+
+};
+
 export {
     getUsers,
-    getUserById
+    getUserById,
+    createUser
 }

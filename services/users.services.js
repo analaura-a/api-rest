@@ -18,7 +18,16 @@ async function getUserById(id) {
     return db.collection("users").findOne({ _id: new ObjectId(id) });
 }
 
+//Crear un nuevo usuario
+async function createUser(user) {
+    const users = await db.collection("users").insertOne(user);
+    user._id = users.insertedId;
+
+    return user;
+}
+
 export {
     getUsers,
-    getUserById
+    getUserById,
+    createUser
 }

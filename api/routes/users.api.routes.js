@@ -10,4 +10,7 @@ route.get('/users', controllers.getUsers);
 //Obtener un usuario en especifico
 route.get('/users/:id', controllers.getUserById);
 
+//Crear un nuevo usuario
+route.post('/users', controllers.createUser);
+
 export default route;
