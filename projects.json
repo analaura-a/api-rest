@@ -1,0 +1,91 @@
+[
+    {
+        "type": "personal",
+        "status": "open",
+        "name": "E-commerce de tecnología",
+        "about": "TecnoMarket es un ambicioso proyecto web de comercio electrónico que estoy construyendo para mi portfolio. Me gustaría continuar su desarrollo junto a otras personas para ganar experiencia trabajando con otras personas, aumentar la calidad del producto final y además colaborar con diseñadores.",
+        "img": "https://picsum.photos/400/225",
+        "required_availability": "Bajo",
+        "open-positions": [
+            {
+                "profile": "UX/UI Designer",
+                "required_skills": [
+                    "Figma"
+                ],
+                "desired_skills": [
+                    "CSS"
+                ]
+            },
+            {
+                "profile": "Frontend Developer",
+                "required_skills": [
+                    "React"
+                ],
+                "desired_skills": [
+                    "TailwindCSS"
+                ]
+            }
+        ],
+        "link": "http://miweb.com/proyecto"
+    },
+    {
+        "type": "personal",
+        "status": "open",
+        "name": "Nombre del proyecto",
+        "about": "Descripción del proyecto.",
+        "img": "https://picsum.photos/400/225",
+        "required_availability": "Nivel de compromiso",
+        "open-positions": [
+            {
+                "profile": "Perfil profesional",
+                "required_skills": [
+                    "Conocimiento1"
+                ],
+                "desired_skills": [
+                    "Conocimiento2"
+                ]
+            }
+        ],
+        "link": "http://miweb.com/proyecto"
+    },
+    {
+        "type": "open-source",
+        "status": "open",
+        "name": "Nombre del proyecto2",
+        "about": "Descripción del proyecto2.",
+        "img": "https://picsum.photos/400/225",
+        "required_availability": "Nivel de compromiso",
+        "open-positions": [
+            {
+                "profile": "Perfil profesional",
+                "required_skills": [
+                    "Conocimiento1"
+                ],
+                "desired_skills": [
+                    "Conocimiento2"
+                ]
+            }
+        ],
+        "link": "http://miweb.com/proyecto"
+    },
+    {
+        "type": "open-source",
+        "status": "open",
+        "name": "Nombre del proyecto3",
+        "about": "Descripción del proyecto4.",
+        "img": "https://picsum.photos/400/225",
+        "required_availability": "Nivel de compromiso",
+        "open-positions": [
+            {
+                "profile": "Perfil profesional",
+                "required_skills": [
+                    "Conocimiento1"
+                ],
+                "desired_skills": [
+                    "Conocimiento2"
+                ]
+            }
+        ],
+        "link": "http://miweb.com/proyecto"
+    }
+]

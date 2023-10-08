@@ -1,5 +1,3 @@
-//instalar mongodb 
-
 import express from "express";
 import ProjectsRoute from '../routes/projects.routes.js';
 
