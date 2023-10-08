@@ -11,6 +11,18 @@ const getProjects = (req, res) => {
 
 };
 
+//Traer un proyecto en particular
+const getProjectById = (req, res) => {
+    const id = req.params.id;
+    service.getProjectById(id).then((project) => {
+        if (project) {
+            res.status(200).json(project);
+        } else {
+            res.status(404).json();
+        }
+    });
+};
+
 //Crear un nuevo proyecto
 const createProject = (req, res) => {
 
@@ -34,8 +46,53 @@ const createProject = (req, res) => {
         });
 };
 
+//Editar un proyecto
+const editProject = (req, res) => {
+    const id = req.params.id;
+
+    const project = {};
+
+    if (req.body.type) {
+        project.type = req.body.type;
+    }
+
+    if (req.body.status) {
+        project.status = req.body.status;
+    }
+
+    if (req.body.name) {
+        project.name = req.body.name;
+    }
+
+    if (req.body.about) {
+        project.about = req.body.about;
+    }
+
+    if (req.body.img) {
+        project.img = req.body.img;
+    }
+
+    if (req.body.required_availability) {
+        project.required_availability = req.body.required_availability;
+    }
+
+    if (req.body.link) {
+        project.link = req.body.link;
+    }
+
+    service.editProject(id, project).then((editedProject) => {
+        if (editedProject) {
+            res.status(200).json(editedProject);
+        } else {
+            res.status(404).json();
+        }
+    });
+
+};
 
 export {
     getProjects,
-    createProject
+    getProjectById,
+    createProject,
+    editProject
 }

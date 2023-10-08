@@ -7,8 +7,14 @@ const route = Router();
 //Obtener todos los proyectos
 route.get('/projects', controllers.getProjects);
 
+//Obtener un proyecto en especifico
+route.get('/projects/:id', controllers.getProjectById)
+
 //Agregar un nuevo proyecto
 route.post('/projects', controllers.createProject);
+
+//Editar un proyecto
+route.patch('/projects/:id', controllers.editProject);
 
 export default route;
 

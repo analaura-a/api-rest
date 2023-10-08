@@ -51,6 +51,11 @@ async function getProjectsOpenSource(filter = {}) {
         .toArray();
 }
 
+//Obtener un proyecto en específico
+async function getProjectById(id) {
+    return db.collection("projects").findOne({ _id: new ObjectId(id) });
+}
+
 //Crear un nuevo proyecto
 async function createProject(project) {
     const projects = await db.collection("projects").insertOne(project);
@@ -59,11 +64,17 @@ async function createProject(project) {
     return project;
 }
 
-
+//Editar un proyecto
+async function editProject(id, project) {
+    const editedProject = await db.collection("projects").updateOne({ _id: new ObjectId(id) }, { $set: project });
+    return editedProject;
+}
 
 export {
     getProjects,
     getProjectsPersonal,
     getProjectsOpenSource,
-    createProject
+    getProjectById,
+    createProject,
+    editProject
 }
