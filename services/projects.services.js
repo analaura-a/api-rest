@@ -9,6 +9,10 @@ async function getProjects(filter = {}) {
 
     const filterMongo = { deleted: { $ne: true } }
 
+    if (filter.name) {
+        filterMongo.$text = { $search: filter.name }
+    }
+
     return db
         .collection("projects")
         .find(filterMongo)
@@ -16,7 +20,7 @@ async function getProjects(filter = {}) {
 }
 
 //Obtener todos los proyectos de tipo personal
-async function getProjectsPersonal(filter = { }) {
+async function getProjectsPersonal(filter = {}) {
 
     const filterMongo = {
         $and: [
