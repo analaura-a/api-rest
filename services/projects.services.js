@@ -70,11 +70,19 @@ async function editProject(id, project) {
     return editedProject;
 }
 
+//Eliminar un proyecto
+const deleteProject = async (id) => {
+    const deletedProject = await db.collection("projects").updateOne({ _id: new ObjectId(id) }, { $set: { deleted: true } }); //Borrado lógico
+    return deletedProject;
+};
+
+
 export {
     getProjects,
     getProjectsPersonal,
     getProjectsOpenSource,
     getProjectById,
     createProject,
-    editProject
+    editProject,
+    deleteProject
 }

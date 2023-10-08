@@ -16,14 +16,7 @@ route.post('/projects', controllers.createProject);
 //Editar un proyecto
 route.patch('/projects/:id', controllers.editProject);
 
-export default route;
+//Eliminar un proyecto
+route.delete("/projects/:id", controllers.deleteProject);
 
-// {
-//     "type": "personal",
-//     "status": "open",
-//     "name": "Landin Page bonita",
-//     "about": "Buscando gente para agregar una landing a nuestros portfolios.",
-//     "img": "https://picsum.photos/400/225",
-//     "required_availability": "Alta",
-//     "link": "davinci.edu.ar"
-//   }
+export default route;

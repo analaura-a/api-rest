@@ -90,9 +90,24 @@ const editProject = (req, res) => {
 
 };
 
+//Eliminar un proyecto
+const deleteProject = (req, res) => {
+
+    const id = req.params.id;
+
+    service
+        .deleteProject(id)
+        .then(() => {
+            res.status(204).json();
+        })
+        .catch((error) => res.status(500).json());
+
+};
+
 export {
     getProjects,
     getProjectById,
     createProject,
-    editProject
+    editProject,
+    deleteProject
 }
