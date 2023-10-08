@@ -15,7 +15,41 @@ async function getProjects(filter = {}) {
         .toArray();
 }
 
+//Obtener todos los proyectos de tipo personal
+async function getProjectsPersonal(filter = { }) {
+
+    const filterMongo = {
+        $and: [
+            { deleted: { $ne: true } },
+            { type: "personal" }
+        ]
+    }
+
+    return db
+        .collection("projects")
+        .find(filterMongo)
+        .toArray();
+}
+
+//Obtener todos los proyectos de tipo open-source
+async function getProjectsOpenSource(filter = {}) {
+
+    const filterMongo = {
+        $and: [
+            { deleted: { $ne: true } },
+            { type: "open-source" }
+        ]
+    }
+
+    return db
+        .collection("projects")
+        .find(filterMongo)
+        .toArray();
+}
+
 
 export {
-    getProjects
+    getProjects,
+    getProjectsPersonal,
+    getProjectsOpenSource
 }

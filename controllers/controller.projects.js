@@ -10,6 +10,28 @@ const getProjects = (req, res) => {
 
 };
 
+//Traer todos los proyectos de tipo personal
+const getProjectsPersonal = (req, res) => {
+
+    service.getProjectsPersonal({ deleted: true }).then((projects) => {
+        res.send(view.createProjectsListPage(projects));
+    });
+
+};
+
+//Traer todos los proyectos de tipo open-source
+const getProjectsOpenSource = (req, res) => {
+
+    service.getProjectsOpenSource({ deleted: true }).then((projects) => {
+        res.send(view.createProjectsListPage(projects));
+    });
+
+};
+
+
+
 export {
-    getProjects
+    getProjects,
+    getProjectsPersonal,
+    getProjectsOpenSource
 }

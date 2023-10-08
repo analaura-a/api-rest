@@ -7,9 +7,15 @@ const route = Router();
 //Traer todos los proyectos
 route.get('/projects', controllers.getProjects)
 
+//Traer los proyectos de tipo personal
+route.get('/projects/personal', controllers.getProjectsPersonal)
+
+//Traer los proyectos de tipo open-source
+route.get('/projects/open-source', controllers.getProjectsOpenSource)
+
 //Crear un nuevo proyecto
-// route.get("/productos/nuevo", controllers.);
-// route.post("/productos/nuevo", controllers.);
+// route.get("/projects/new", controllers.);
+// route.post("/projects/new", controllers.);
 
 
 export default route;
