@@ -51,9 +51,19 @@ async function getProjectsOpenSource(filter = {}) {
         .toArray();
 }
 
+//Crear un nuevo proyecto
+async function createProject(project) {
+    const projects = await db.collection("projects").insertOne(project);
+    project._id = projects.insertedId;
+
+    return project;
+}
+
+
 
 export {
     getProjects,
     getProjectsPersonal,
-    getProjectsOpenSource
+    getProjectsOpenSource,
+    createProject
 }
