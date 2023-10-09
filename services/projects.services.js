@@ -51,6 +51,11 @@ async function getProjectsOpenSource(filter = {}) {
         .toArray();
 }
 
+//Obtener todos los proyectos creados por un usuario en específico
+async function getProjectsByUser(id) {
+    return db.collection("projects").find({ founder_id: new ObjectId(id) }).toArray();
+}
+
 //Obtener un proyecto en específico
 async function getProjectById(id) {
     return db.collection("projects").findOne({ _id: new ObjectId(id) });
@@ -81,6 +86,7 @@ export {
     getProjects,
     getProjectsPersonal,
     getProjectsOpenSource,
+    getProjectsByUser,
     getProjectById,
     createProject,
     editProject,

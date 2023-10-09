@@ -7,6 +7,9 @@ const route = Router();
 //Obtener todos los proyectos
 route.get('/projects', controllers.getProjects);
 
+//Obtener todos los proyectos que creó un usuario en particular
+route.get('/user/:id/projects', controllers.getProjectsByUser);
+
 //Obtener un proyecto en especifico
 route.get('/projects/:id', controllers.getProjectById)
 

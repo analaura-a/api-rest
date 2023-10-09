@@ -11,6 +11,20 @@ const getProjects = (req, res) => {
 
 };
 
+//Traer todos los proyectos creados por un usuario en particular
+const getProjectsByUser = (req, res) => {
+
+    const id = req.params.id;
+    service.getProjectsByUser(id).then((projects) => {
+        if (projects) {
+            res.status(200).json(projects);
+        } else {
+            res.status(404).json();
+        }
+    });
+
+};
+
 //Traer un proyecto en particular
 const getProjectById = (req, res) => {
     const id = req.params.id;
@@ -106,6 +120,7 @@ const deleteProject = (req, res) => {
 
 export {
     getProjects,
+    getProjectsByUser,
     getProjectById,
     createProject,
     editProject,
