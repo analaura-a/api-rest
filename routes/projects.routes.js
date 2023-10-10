@@ -13,8 +13,4 @@ route.get('/projects/personal', controllers.getProjectsPersonal)
 //Traer los proyectos de tipo open-source
 route.get('/projects/open-source', controllers.getProjectsOpenSource)
 
-//Crear un nuevo proyecto
-// route.get("/projects/new", controllers.);
-// route.post("/projects/new", controllers.);
-
 export default route;

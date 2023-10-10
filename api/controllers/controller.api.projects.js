@@ -47,7 +47,9 @@ const createProject = (req, res) => {
         about: req.body.about,
         img: req.body.img,
         required_availability: req.body.required_availability,
-        link: req.body.link
+        link: req.body.link,
+        open_positions: req.body.open_positions,
+        founder_id: req.body.founder_id
     };
 
     service

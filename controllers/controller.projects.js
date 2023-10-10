@@ -28,8 +28,6 @@ const getProjectsOpenSource = (req, res) => {
 
 };
 
-
-
 export {
     getProjects,
     getProjectsPersonal,

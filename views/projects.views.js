@@ -1,5 +1,6 @@
 import { createPage } from "../pages/utils.js";
 
+//Crea el listado de proyectos
 function createProjectsListPage(projects) {
     let html = "";
     html += `<div class="row">`;

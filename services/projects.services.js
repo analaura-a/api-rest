@@ -25,7 +25,7 @@ async function getProjectsPersonal(filter = {}) {
     const filterMongo = {
         $and: [
             { deleted: { $ne: true } },
-            { type: "personal" }
+            { type: "Personal" }
         ]
     }
 
@@ -41,7 +41,7 @@ async function getProjectsOpenSource(filter = {}) {
     const filterMongo = {
         $and: [
             { deleted: { $ne: true } },
-            { type: "open-source" }
+            { type: "Open-source" }
         ]
     }
 

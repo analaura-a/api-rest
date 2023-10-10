@@ -19,7 +19,7 @@ route.post('/projects', controllers.createProject);
 //Editar un proyecto
 route.patch('/projects/:id', controllers.editProject);
 
-//Eliminar un proyecto
+//Borrar un proyecto (eliminado lógico)
 route.delete("/projects/:id", controllers.deleteProject);
 
 export default route;
