@@ -5,9 +5,13 @@ const getProjects = (req, res) => {
 
     const filter = req.query;
 
-    service.getProjects(filter).then((projects) => {
-        res.status(200).json(projects);
-    });
+    service.getProjects(filter)
+        .then((projects) => {
+            res.status(200).json(projects);
+        })
+        .catch((error) => {
+            res.status(404).json();
+        });
 
 };
 

@@ -3,9 +3,13 @@ import * as service from "../../services/users.services.js";
 //Traer todos los usuarios
 const getUsers = (req, res) => {
 
-    service.getUsers().then((users) => {
-        res.status(200).json(users);
-    });
+    service.getUsers()
+        .then((users) => {
+            res.status(200).json(users)
+        })
+        .catch((error) => {
+            res.status(404).json();
+        });
 
 };
 
